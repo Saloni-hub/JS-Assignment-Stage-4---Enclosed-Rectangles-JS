@@ -21,6 +21,7 @@ function updateStructure(recA, recB) {
 		return { ...recA };
 	}
 }
+module.exports = updateStructure;
 
 function relative(recA, recB) {
 	const recAn = normalize(recA);
@@ -75,4 +76,4 @@ function normalize(rec) {
 	}
 }
 
-module.exports = updateStructure;
+
