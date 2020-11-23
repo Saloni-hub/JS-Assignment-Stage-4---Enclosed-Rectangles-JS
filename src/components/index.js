@@ -48,7 +48,7 @@ function relative(recA, recB) {
 		res.right = `${recAn.y2 - recBn.y2}px`;
 
 	}
-
+	return res;
 }
 
 function contains(recA, recB) {
@@ -63,6 +63,8 @@ function contains(recA, recB) {
 		}
 		return false;  
 } 
+const T = 0;
+const W = 0;
 function normalize(rec) {
 	return {
 		x1: rec.top ? parseInt(rec.top): (T - (parseInt(rec.bottom) + parseInt(rec.height))),
