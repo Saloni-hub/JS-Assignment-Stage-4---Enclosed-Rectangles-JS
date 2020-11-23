@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import App from "./components/index";
 function generateCodeFromObject(obj){
     //return a code generated string
    }
@@ -8,4 +8,4 @@ function generateCodeFromObject(obj){
 module.exports=generateCodeFromObject;
 
 
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

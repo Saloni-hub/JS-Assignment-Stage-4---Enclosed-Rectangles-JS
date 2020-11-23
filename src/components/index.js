@@ -55,7 +55,8 @@ function contains(recA, recB) {
 	const recAn = normalize(recA);
 	const recBn = normalize(recB);
 // is recb inside reca
-	if(recAn.x1 <= recBn.x1 
+	if(
+		recAn.x1 <= recBn.x1 
 		&& recAn.y1 <= recBn.y1 
 		&& recAn.x2 >= recBn.x2
 		&& recAn.y2 >= recBn.y2) {
@@ -68,7 +69,7 @@ const W = 0;
 function normalize(rec) {
 	return {
 		x1: rec.top ? parseInt(rec.top): (T - (parseInt(rec.bottom) + parseInt(rec.height))),
-		y1: rec.left ? parseInt(rec.left) : (W - (parseInt(rec.width) + parseInt(rec.right))),
+		y1: rec.left ? parseInt(rec.left) : (W - (parseInt(rec.right) + parseInt(rec.width))),
 		x2: rec.bottom ? (T - parseInt(rec.bottom)) : (parseInt(rec.top)+parseInt(rec.height)),
 		y2: rec.right ? (W-parseInt(rec.right)) : (parent(rec.left) + parseInt(rec.width))
 	}
